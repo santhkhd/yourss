@@ -55,7 +55,7 @@ def main():
             seen.add(v['videoId'])
     unique_videos.sort(key=lambda v: v['published'], reverse=True)
     with open('videos.json', 'w', encoding='utf-8') as f:
-        json.dump(all_videos, f, indent=2, ensure_ascii=False)
+        json.dump(unique_videos, f, indent=2, ensure_ascii=False)
     print(f'Added {len(new_videos)} new videos.')
 
 if __name__ == '__main__':
