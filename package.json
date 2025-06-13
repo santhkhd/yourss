@@ -1,0 +1,9 @@
+
+{
+  "name": "youtube-rss-viewer",
+  "version": "1.0.0",
+  "main": "fetchVideos.js",
+  "dependencies": {
+    "rss-parser": "^3.12.0"
+  }
+}

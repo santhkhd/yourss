@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Favorites</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Favorited Videos</h1>
+    <div class="grid" id="favoritesGrid"></div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const grid = document.getElementById('favoritesGrid');
+  const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+  favorites.forEach(video => {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = \`<h3>\${video.title}</h3><p>\${video.description}</p>\`;
+    grid.appendChild(card);
+  });
+});
+</script>
+</body>
+</html>
