@@ -1,3 +1,10 @@
+name: Update YouTube RSS Feed
+
+on:
+  schedule:
+    - cron: '0 * * * *' # every hour
+  workflow_dispatch:
+
 jobs:
   update-feed:
     runs-on: ubuntu-latest
@@ -12,16 +19,6 @@ jobs:
         run: pip install feedparser requests
       - name: Fetch and update YouTube RSS feed
         run: python fetch_rss.py
-      - name: Debug Secret
-        run: |
-          if [ -z "${GH_PAT}" ]; then
-            echo "GH_PAT is NOT set!"
-            exit 1
-          else
-            echo "GH_PAT is set."
-          fi
-        env:
-          GH_PAT: ${{ secrets.GH_PAT }}
       - name: Commit and push changes
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
