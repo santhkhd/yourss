@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Channel Videos</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="top-nav">
+    <a href="index.html">Home</a>
+    <a href="videos.html" class="active">Favorite</a>
+  </nav>
+  <header class="videos-header">
+  <button class="back-btn" onclick="window.location.href='index.html'" aria-label="Back to channels">&#8592; Back</button>
+  <h2 class="videos-title" id="videos-title">Videos</h2>
+</header>
+<main>
+  <div class="videos-list" id="videos-list"></div>
+</main>
+<div class="bottom-panel">
+  <button id="toggle-view-btn" class="icon-btn" title="Switch to List View" aria-label="Switch to List View">
+    <svg id="toggle-view-icon" viewBox="0 0 24 24"><path d="M3,3V11H11V3M3,13V21H11V13M13,3V11H21V3M13,13V21H21V13" /></svg>
+  </button>
+  <button id="category-btn" class="icon-btn" title="Categories">
+    <svg viewBox="0 0 24 24"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
+  </button>
+</div>
+<footer class="footer">
+  <span>&copy; 2025 YouTube RSS Viewer</span>
+</footer>
+<script src="videos.js"></script>
+</body>
+</html>
