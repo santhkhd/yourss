@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
     sortDirection: "asc", // Default: oldest to latest
     page: 1,
     pageSize: 36,
-    totalPages: 1,
   };
 
   const els = {
@@ -16,11 +15,14 @@ document.addEventListener("DOMContentLoaded", () => {
     sort: document.getElementById("sortSelect"),
     sortDirectionBtn: document.getElementById("sortDirectionBtn"),
     grid: document.getElementById("movieGrid"),
-    pagination: document.getElementById("pagination"),
+    sentinel: document.getElementById("scrollSentinel"),
     themeToggle: document.getElementById("themeToggle"),
     template: document.getElementById("movieCardTemplate"),
     movieCount: document.getElementById("movieCount"),
+    searchClear: document.getElementById("searchClearBtn"),
   };
+
+  let sentinelObserver;
 
   const init = async () => {
     attachEvents();
@@ -28,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     state.all = await MovieStore.loadMovies();
     updateMovieCount();
     runPipeline();
+    setupInfiniteScroll();
   };
 
   const attachEvents = () => {
@@ -35,6 +38,16 @@ document.addEventListener("DOMContentLoaded", () => {
       state.search = e.target.value.trim().toLowerCase();
       resetPage();
     }, 150));
+
+    if (els.searchClear) {
+      els.searchClear.addEventListener("click", () => {
+        if (!els.search.value) return;
+        els.search.value = "";
+        state.search = "";
+        resetPage();
+        els.search.focus();
+      });
+    }
 
     els.sort.addEventListener("change", (e) => {
       state.sortBy = e.target.value;
@@ -86,8 +99,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     state.filtered = sortList(filtered, state.sortBy, state.sortDirection);
-    renderMovies();
-    renderPagination();
+    state.page = 1;
+    renderMovies(true);
   };
 
   const updateMovieCount = () => {
@@ -162,16 +175,19 @@ document.addEventListener("DOMContentLoaded", () => {
     return sorted;
   };
 
-  const renderMovies = () => {
-    els.grid.innerHTML = "";
+  const renderMovies = (reset = false) => {
+    if (reset) {
+      els.grid.innerHTML = "";
+    }
 
-    const totalPages = Math.ceil(state.filtered.length / state.pageSize) || 1;
-    state.totalPages = totalPages;
-    state.page = Math.max(1, Math.min(state.page, totalPages));
+    const previouslyRendered = reset ? 0 : els.grid.childElementCount;
+    const targetCount = Math.min(state.filtered.length, state.page * state.pageSize);
+    if (previouslyRendered >= targetCount) {
+      toggleSentinel();
+      return;
+    }
 
-    const start = (state.page - 1) * state.pageSize;
-    const end = start + state.pageSize;
-    const slice = state.filtered.slice(start, end);
+    const slice = state.filtered.slice(previouslyRendered, targetCount);
 
     const fragment = document.createDocumentFragment();
     const favoritesSet = new Set(
@@ -233,77 +249,41 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     els.grid.appendChild(fragment);
+    toggleSentinel();
   };
 
-  const renderPagination = () => {
-    if (!els.pagination) return;
-    els.pagination.innerHTML = "";
+  const toggleSentinel = () => {
+    if (!els.sentinel) return;
+    const hasMore = state.filtered.length > state.page * state.pageSize;
+    els.sentinel.style.display = hasMore ? "block" : "none";
+  };
 
-    if (state.filtered.length === 0) {
+  const loadNextPage = () => {
+    if (state.filtered.length === 0) return;
+    if (state.page * state.pageSize >= state.filtered.length) {
+      toggleSentinel();
       return;
     }
+    state.page += 1;
+    renderMovies();
+  };
 
-    const totalPages = Math.max(1, Math.ceil(state.filtered.length / state.pageSize));
-    state.totalPages = totalPages;
-    state.page = Math.max(1, Math.min(state.page, totalPages));
-
-    const makeButton = ({ label, disabled = false, page, isActive = false }) => {
-      const btn = document.createElement("button");
-      btn.className = `pagination__btn${isActive ? " is-active" : ""}`;
-      btn.textContent = label;
-      btn.disabled = disabled;
-      if (!disabled && page && page !== state.page) {
-        btn.addEventListener("click", () => {
-          state.page = page;
-          renderMovies();
-          renderPagination();
-          if (els.grid) {
-            els.grid.scrollIntoView({ behavior: "smooth", block: "start" });
+  const setupInfiniteScroll = () => {
+    if (!els.sentinel) return;
+    if (sentinelObserver) {
+      sentinelObserver.disconnect();
+    }
+    sentinelObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            loadNextPage();
           }
         });
-      }
-      return btn;
-    };
-
-    const info = document.createElement("span");
-    info.className = "pagination__info";
-    info.textContent = `Page ${state.page} of ${totalPages}`;
-
-    els.pagination.appendChild(
-      makeButton({
-        label: "Prev",
-        disabled: state.page === 1,
-        page: state.page - 1,
-      })
+      },
+      { rootMargin: "200px 0px" }
     );
-
-    const windowSize = 5;
-    let start = Math.max(1, state.page - Math.floor(windowSize / 2));
-    let end = start + windowSize - 1;
-    if (end > totalPages) {
-      end = totalPages;
-      start = Math.max(1, end - windowSize + 1);
-    }
-
-    for (let i = start; i <= end; i += 1) {
-      els.pagination.appendChild(
-        makeButton({
-          label: String(i),
-          page: i,
-          isActive: i === state.page,
-        })
-      );
-    }
-
-    els.pagination.appendChild(
-      makeButton({
-        label: "Next",
-        disabled: state.page === totalPages,
-        page: state.page + 1,
-      })
-    );
-
-    els.pagination.appendChild(info);
+    sentinelObserver.observe(els.sentinel);
   };
 
   function debounce(fn, delay = 200) {

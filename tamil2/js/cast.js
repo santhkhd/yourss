@@ -4,6 +4,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     all: [],
     selectedPerson: null,
     peopleMap: new Map(),
+    searchTerm: "",
+    activeLetter: "ALL",
+    compactView: false,
+    visiblePeople: 25,
   };
 
   const els = {
@@ -14,6 +18,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     castTemplate: document.getElementById("castCardTemplate"),
     movieTemplate: document.getElementById("movieCardTemplate"),
     themeToggle: document.getElementById("themeToggle"),
+    clearSearch: document.getElementById("clearCastSearch"),
+    compactToggle: document.getElementById("compactViewToggle"),
+    alphaFilter: document.getElementById("alphaFilter"),
+    loadMoreWrapper: document.getElementById("loadMorePeople"),
+    loadMoreBtn: document.getElementById("loadMorePeopleBtn"),
+    backToCast: document.getElementById("backToCastBtn"),
   };
 
   const init = async () => {
@@ -34,10 +44,62 @@ document.addEventListener("DOMContentLoaded", async () => {
       renderPeople();
     }
 
-    els.castSearch.addEventListener("input", debounce((e) => {
-      const query = e.target.value.trim().toLowerCase();
-      renderPeople(query);
-    }, 200));
+    if (els.castSearch) {
+      els.castSearch.addEventListener("input", debounce((e) => {
+        state.searchTerm = e.target.value.trim().toLowerCase();
+        resetVisiblePeople();
+        renderPeople();
+      }, 200));
+    }
+
+    if (els.clearSearch) {
+      els.clearSearch.addEventListener("click", () => {
+        if (!els.castSearch) return;
+        els.castSearch.value = "";
+        state.searchTerm = "";
+        resetVisiblePeople();
+        renderPeople();
+        els.castSearch.focus();
+      });
+    }
+
+    if (els.compactToggle) {
+      els.compactToggle.addEventListener("click", () => {
+        state.compactView = !state.compactView;
+        updateCompactView();
+      });
+    }
+
+    buildAlphaFilter();
+    if (els.alphaFilter) {
+      els.alphaFilter.addEventListener("click", (event) => {
+        const btn = event.target.closest("button[data-letter]");
+        if (!btn) return;
+        const letter = btn.dataset.letter;
+        if (state.activeLetter === letter) return;
+        state.activeLetter = letter;
+        updateAlphaFilterActive();
+        resetVisiblePeople();
+        renderPeople();
+      });
+    }
+
+    updateCompactView();
+
+    if (els.loadMoreBtn) {
+      els.loadMoreBtn.addEventListener("click", () => {
+        state.visiblePeople += 25;
+        renderPeople();
+      });
+    }
+
+    if (els.backToCast) {
+      els.backToCast.addEventListener("click", () => {
+        state.selectedPerson = null;
+        showPeopleView();
+        window.history.pushState({}, "", "cast.html");
+      });
+    }
   };
 
   const extractNames = (value) => {
@@ -82,17 +144,66 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   };
 
-  const renderPeople = (searchQuery = "") => {
+  const buildAlphaFilter = () => {
+    if (!els.alphaFilter) return;
+    const letters = ["ALL", ..."ABCDEFGHIJKLMNOPQRSTUVWXYZ", "#"];
+    const container = els.alphaFilter.querySelector('.alpha-filter__container') || els.alphaFilter;
+    container.innerHTML = "";
+    letters.forEach((letter) => {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.dataset.letter = letter;
+      btn.className = "alpha-filter__btn";
+      btn.textContent = letter === "ALL" ? "All" : letter;
+      if (letter === state.activeLetter) {
+        btn.classList.add("is-active");
+      }
+      container.appendChild(btn);
+    });
+  };
+
+  const updateAlphaFilterActive = () => {
+    if (!els.alphaFilter) return;
+    const container = els.alphaFilter.querySelector('.alpha-filter__container') || els.alphaFilter;
+    container.querySelectorAll("button[data-letter]").forEach((btn) => {
+      btn.classList.toggle("is-active", btn.dataset.letter === state.activeLetter);
+    });
+  };
+
+  const updateCompactView = () => {
+    if (els.castGrid) {
+      els.castGrid.classList.toggle("cast-grid--compact", state.compactView);
+    }
+    if (els.compactToggle) {
+      els.compactToggle.setAttribute("aria-pressed", state.compactView ? "true" : "false");
+      els.compactToggle.textContent = state.compactView ? "Comfort view" : "Compact cards";
+    }
+  };
+
+  const renderPeople = () => {
     els.castGrid.style.display = "grid";
     els.moviesGrid.style.display = "none";
     els.castGrid.innerHTML = "";
+    if (els.backToCast) {
+      els.backToCast.style.display = "none";
+    }
 
     let peopleList = Array.from(state.peopleMap.entries());
     
-    if (searchQuery) {
-      peopleList = peopleList.filter(([name]) => 
-        name.toLowerCase().includes(searchQuery)
+    if (state.searchTerm) {
+      peopleList = peopleList.filter(([name]) =>
+        name.toLowerCase().includes(state.searchTerm)
       );
+    }
+
+    if (state.activeLetter && state.activeLetter !== "ALL") {
+      peopleList = peopleList.filter(([name]) => {
+        const firstChar = (name.trim()[0] || "").toUpperCase();
+        if (state.activeLetter === "#") {
+          return !/^[A-Z]$/.test(firstChar);
+        }
+        return firstChar === state.activeLetter;
+      });
     }
 
     peopleList.sort((a, b) => {
@@ -103,9 +214,10 @@ document.addEventListener("DOMContentLoaded", async () => {
       return a[0].localeCompare(b[0]);
     });
 
+    const limitedList = peopleList.slice(0, state.visiblePeople);
     const fragment = document.createDocumentFragment();
 
-    peopleList.forEach(([personName, personData]) => {
+    limitedList.forEach(([personName, personData]) => {
       const card = els.castTemplate.content.cloneNode(true);
       const link = card.querySelector(".cast-card__link");
       const nameEl = card.querySelector(".cast-card__name");
@@ -128,11 +240,15 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
 
     els.castGrid.appendChild(fragment);
+
+    if (els.loadMoreWrapper) {
+      const hasMore = peopleList.length > state.visiblePeople;
+      els.loadMoreWrapper.style.display = hasMore ? "flex" : "none";
+    }
   };
 
   const renderMoviesForPerson = (personName) => {
-    els.castGrid.style.display = "none";
-    els.moviesGrid.style.display = "grid";
+    showMoviesView();
     const total = state.peopleMap.get(personName)?.movies.length || 0;
     els.castMoviesTitle.textContent = `Movies with ${personName} (${total})`;
     els.moviesGrid.innerHTML = "";
@@ -180,6 +296,32 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
 
     els.moviesGrid.appendChild(fragment);
+  };
+
+  const showPeopleView = () => {
+    els.castGrid.style.display = "grid";
+    els.moviesGrid.style.display = "none";
+    if (els.backToCast) {
+      els.backToCast.style.display = "none";
+    }
+  };
+
+  const showMoviesView = () => {
+    els.castGrid.style.display = "none";
+    els.moviesGrid.style.display = "grid";
+    if (els.backToCast) {
+      els.backToCast.style.display = "inline-flex";
+    }
+    if (els.loadMoreWrapper) {
+      els.loadMoreWrapper.style.display = "none";
+    }
+  };
+
+  const resetVisiblePeople = () => {
+    state.visiblePeople = 25;
+    if (els.loadMoreWrapper) {
+      els.loadMoreWrapper.style.display = "none";
+    }
   };
 
   function debounce(fn, delay = 200) {
