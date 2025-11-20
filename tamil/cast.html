@@ -15,9 +15,13 @@
   <body class="page page--cast">
     <header class="app-header">
       <div class="brand">
-        <a href="index.html" style="text-decoration: none; color: inherit;">
-          <h1 class="brand__title">Browse by Cast</h1>
-        </a>
+        <div class="brand__text">
+          <p class="brand__eyebrow">Tamil Cinematic Vault</p>
+          <a href="index.html" style="text-decoration: none; color: inherit;">
+            <h1 class="brand__title">Browse by Cast</h1>
+          </a>
+          <p class="brand__subtitle">Find films by your favourite stars</p>
+        </div>
       </div>
       <div class="header-actions">
         <button id="themeToggle" class="btn ghost" aria-label="Toggle theme">
@@ -28,22 +32,69 @@
 
     <main>
       <section class="filters">
-        <div class="filters__row">
-          <label class="field">
+        <div class="filters__row filters__row--actions">
+          <label class="field field--search">
             <span>Search Cast</span>
-            <input
-              id="castSearchInput"
-              type="search"
-              placeholder="Search actor/actress name..."
-              autocomplete="off"
-            />
+            <div class="field__input-group">
+              <input
+                id="castSearchInput"
+                type="search"
+                placeholder="Search actor/actress name..."
+                autocomplete="off"
+              />
+              <button id="clearCastSearch" class="field__clear" type="button" aria-label="Clear search">
+                ✕
+              </button>
+            </div>
           </label>
+          <div class="filter-actions">
+            <button id="compactViewToggle" class="btn tiny outline" type="button" aria-pressed="false">
+              Compact cards
+            </button>
+          </div>
+        </div>
+        <div id="alphaFilter" class="alpha-filter" aria-label="Filter cast by first letter">
+          <div class="alpha-filter__container">
+            <button type="button" class="alpha-filter__btn is-active" data-letter="ALL">All</button>
+            <button type="button" class="alpha-filter__btn" data-letter="A">A</button>
+            <button type="button" class="alpha-filter__btn" data-letter="B">B</button>
+            <button type="button" class="alpha-filter__btn" data-letter="C">C</button>
+            <button type="button" class="alpha-filter__btn" data-letter="D">D</button>
+            <button type="button" class="alpha-filter__btn" data-letter="E">E</button>
+            <button type="button" class="alpha-filter__btn" data-letter="F">F</button>
+            <button type="button" class="alpha-filter__btn" data-letter="G">G</button>
+            <button type="button" class="alpha-filter__btn" data-letter="H">H</button>
+            <button type="button" class="alpha-filter__btn" data-letter="I">I</button>
+            <button type="button" class="alpha-filter__btn" data-letter="J">J</button>
+            <button type="button" class="alpha-filter__btn" data-letter="K">K</button>
+            <button type="button" class="alpha-filter__btn" data-letter="L">L</button>
+            <button type="button" class="alpha-filter__btn" data-letter="M">M</button>
+            <button type="button" class="alpha-filter__btn" data-letter="N">N</button>
+            <button type="button" class="alpha-filter__btn" data-letter="O">O</button>
+            <button type="button" class="alpha-filter__btn" data-letter="P">P</button>
+            <button type="button" class="alpha-filter__btn" data-letter="Q">Q</button>
+            <button type="button" class="alpha-filter__btn" data-letter="R">R</button>
+            <button type="button" class="alpha-filter__btn" data-letter="S">S</button>
+            <button type="button" class="alpha-filter__btn" data-letter="T">T</button>
+            <button type="button" class="alpha-filter__btn" data-letter="U">U</button>
+            <button type="button" class="alpha-filter__btn" data-letter="V">V</button>
+            <button type="button" class="alpha-filter__btn" data-letter="W">W</button>
+            <button type="button" class="alpha-filter__btn" data-letter="X">X</button>
+            <button type="button" class="alpha-filter__btn" data-letter="Y">Y</button>
+            <button type="button" class="alpha-filter__btn" data-letter="Z">#</button>
+          </div>
         </div>
       </section>
 
       <section id="castGrid" class="cast-grid"></section>
+      <div id="loadMorePeople" class="load-more" style="display: none;">
+        <button id="loadMorePeopleBtn" class="btn outline" type="button">Load more</button>
+      </div>
       
       <section id="moviesGrid" class="movie-grid" style="display: none;">
+        <button id="backToCastBtn" class="btn tiny outline" style="width: fit-content; margin-bottom: 0.75rem;" type="button">
+          ← Back to cast list
+        </button>
         <h2 id="castMoviesTitle" style="width: 100%; margin-bottom: 1rem;"></h2>
       </section>
     </main>
@@ -92,6 +143,7 @@
       <article class="cast-card">
         <button class="cast-card__link">
           <h3 class="cast-card__name"></h3>
+          <p class="cast-card__role"></p>
           <p class="cast-card__count"></p>
         </button>
       </article>
@@ -112,6 +164,7 @@
           </div>
           <div class="movie-card__body">
             <h3 class="movie-card__title"></h3>
+            <p class="movie-card__year"></p>
           </div>
         </a>
       </article>

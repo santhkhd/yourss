@@ -15,7 +15,12 @@
   <body class="page page--list">
     <header class="app-header">
       <div class="brand">
-        <h1 class="brand__title">Tamil Movies</h1>
+        <div class="brand__text">
+          <p class="brand__eyebrow">Tamil Cinematic Vault</p>
+          <h1 class="brand__title">Tamil Movies</h1>
+          <p class="brand__subtitle">Browse classics to contemporary hits</p>
+          <p class="brand__meta" id="movieCount">Loading total…</p>
+        </div>
       </div>
       <div class="header-actions">
         <button id="themeToggle" class="btn ghost" aria-label="Toggle theme">
@@ -29,12 +34,17 @@
         <div class="filters__row">
           <label class="field field--search">
             <span>Search</span>
-            <input
-              id="searchInput"
-              type="search"
-              placeholder="Title, cast, director, plot..."
-              autocomplete="off"
-            />
+            <div class="field__input-group">
+              <input
+                id="searchInput"
+                type="search"
+                placeholder="Title, cast, director, plot..."
+                autocomplete="off"
+              />
+              <button id="searchClearBtn" class="field__clear" type="button" aria-label="Clear search">
+                ✕
+              </button>
+            </div>
           </label>
 
           <div class="sort-controls">
@@ -59,9 +69,7 @@
       </section>
       
       <section id="movieGrid" class="movie-grid" aria-live="polite"></section>
-      <div class="load-more">
-        <button id="loadMoreBtn" class="btn outline">Load more</button>
-      </div>
+      <div id="scrollSentinel" class="scroll-sentinel" aria-hidden="true"></div>
     </main>
 
     <div class="disclaimer">
