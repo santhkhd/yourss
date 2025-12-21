@@ -4,20 +4,21 @@
     "provider": "rss",
     "arguments": [
       "https://www.youtube.com/feeds/videos.xml?channel_id=UCno6OgN7-NDmRTNBgqWevlw"
-    ]
-  }
-]
-[
+    ],
+    "link": "https://www.youtube.com/channel/UCno6OgN7-NDmRTNBgqWevlw"
+  },
   {
     "channel_id": "UCf8w5m0YsRa8MHQ5bwSGmbw",
     "title": "News18 Tamil Live",
     "thumb_url": "https://yt3.ggpht.com/ytc/AAUvwnj6w8w5m0YsRa8MHQ5bwSGmbw=s88-c-k-c0x00ffffff-no-rj",
-    "provider": "youtube_live"
+    "provider": "youtube_live",
+    "link": "https://www.youtube.com/channel/UCf8w5m0YsRa8MHQ5bwSGmbw"
   },
   {
     "channel_id": "UCup3etEdjyF1L3sRbU-rKLw",
     "title": "Another Live Channel",
     "thumb_url": "https://i4.ytimg.com/vi/1wECsnGZcfc/hqdefault.jpg",
-    "provider": "youtube_live"
+    "provider": "youtube_live",
+    "link": "https://www.youtube.com/channel/UCup3etEdjyF1L3sRbU-rKLw"
   }
 ]

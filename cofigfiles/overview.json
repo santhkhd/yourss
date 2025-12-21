@@ -1,40 +1,44 @@
 {
   "overview": [
     {
-      "title": "All Videos",
+      "title": "YouTube Channels",
+      "provider": "overview",
+      "arguments": [
+        "youtube_categories.json"
+      ],
+      "image": "https://img.icons8.com/color/96/youtube-play.png"
+    },
+    {
+      "title": "Live TV & Shows",
+      "provider": "overview",
+      "arguments": [
+        "live.json"
+      ],
+      "image": "https://img.icons8.com/color/96/tv.png"
+    },
+    {
+      "title": "Newspapers",
+      "provider": "overview",
+      "arguments": [
+        "tamilnews.json"
+      ],
+      "image": "https://img.icons8.com/color/96/news.png"
+    },
+    {
+      "title": "Top Stories",
+      "provider": "rss",
+      "arguments": [
+        "https://www.thehindu.com/news/national/?service=rss"
+      ],
+      "image": "https://img.icons8.com/color/96/hot-article.png"
+    },
+    {
+      "title": "Latest Videos",
       "provider": "json",
-      "arguments": ["https://github.com/santhkhd/comalltamiltvliveshowsan/blob/main/cofigfiles/videos.json"],
-      "image": "https://i4.ytimg.com/vi/MZg1Lj1iyVU/hqdefault.jpg"
-    },
-    {
-      "title": "Channels",
-      "provider": "overview",
-      "arguments": ["https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/cofigfiles/channels.json"],
-      "image": "https://i4.ytimg.com/vi/MZg1Lj1iyVU/hqdefault.jpg"
-    },
-    {
-      "title": "Live Channels",
-      "provider": "overview",
-      "arguments": ["https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/cofigfiles/live.json"],
-      "image": "https://i4.ytimg.com/vi/MZg1Lj1iyVU/hqdefault.jpg"
-    },
-    {
-      "title": "Live TV",
-      "provider": "overview",
-      "arguments": ["https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/cofigfiles/livetv.json"],
-      "image": ""
-    },
-    {
-      "title": "Tamil News",
-      "provider": "overview",
-      "arguments": ["https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/cofigfiles/tamilnews.json"],
-      "image": ""
-    },
-    {
-      "title": "YouTube RSS",
-      "provider": "overview",
-      "arguments": ["https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/cofigfiles/youtube_rss.json"],
-      "image": ""
+      "arguments": [
+        "videos.json"
+      ],
+      "image": "https://img.icons8.com/color/96/video.png"
     }
   ]
 }
