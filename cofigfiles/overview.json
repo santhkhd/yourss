@@ -4,7 +4,7 @@
       "title": "YouTube Channels",
       "provider": "overview",
       "arguments": [
-        "youtube_categories.json"
+        "https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/cofigfiles/youtube_categories.json"
       ],
       "image": "https://img.icons8.com/color/96/youtube-play.png"
     },
@@ -12,7 +12,7 @@
       "title": "Live TV & Shows",
       "provider": "overview",
       "arguments": [
-        "live.json"
+        "https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/cofigfiles/live.json"
       ],
       "image": "https://img.icons8.com/color/96/tv.png"
     },
@@ -20,7 +20,7 @@
       "title": "Newspapers",
       "provider": "overview",
       "arguments": [
-        "tamilnews.json"
+        "https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/cofigfiles/tamilnews.json"
       ],
       "image": "https://img.icons8.com/color/96/news.png"
     },
@@ -36,7 +36,7 @@
       "title": "Latest Videos",
       "provider": "json",
       "arguments": [
-        "videos.json"
+        "https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/cofigfiles/videos.json"
       ],
       "image": "https://img.icons8.com/color/96/video.png"
     }
