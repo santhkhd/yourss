@@ -1,0 +1,10 @@
+[
+  {
+    "title": "Live TV 1",
+    "provider": "webview",
+    "arguments": [
+      "https://example.com/live-tv"
+    ]
+  }
+]
+

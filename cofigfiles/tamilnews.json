@@ -1,0 +1,202 @@
+[
+  {
+    "title": "Dainik Bhaskar",
+    "image": "",
+    "provider": "webview",
+    "arguments": [
+      "https://www.bhaskar.com/"
+    ]
+  },
+  {
+    "title": "Malayala Manorama",
+    "image": "",
+    "provider": "webview",
+    "arguments": [
+      "https://www.manoramaonline.com/"
+    ]
+  },
+  {
+    "title": "The Times of India",
+    "image": "",
+    "provider": "webview",
+    "arguments": [
+      "https://timesofindia.indiatimes.com/"
+    ]
+  },
+  {
+    "title": "Amar Ujala",
+    "image": "",
+    "provider": "webview",
+    "arguments": [
+      "https://www.amarujala.com/"
+    ]
+  },
+  {
+    "title": "Hindustan",
+    "image": "https://www.google.com/s2/favicons?domain=www.livehindustan.com",
+    "provider": "webview",
+    "arguments": [
+      "https://www.livehindustan.com/"
+    ]
+  },
+  {
+    "title": "Rajasthan Patrika",
+    "image": "https://www.google.com/s2/favicons?domain=www.patrika.com",
+    "provider": "webview",
+    "arguments": [
+      "https://www.patrika.com/"
+    ]
+  },
+  {
+    "title": "Eenadu",
+    "image": "https://www.google.com/s2/favicons?domain=www.eenadu.net",
+    "provider": "webview",
+    "arguments": [
+      "https://www.eenadu.net/"
+    ]
+  },
+  {
+    "title": "Dainik Jagran",
+    "image": "https://www.google.com/s2/favicons?domain=www.jagran.com",
+    "provider": "webview",
+    "arguments": [
+      "https://www.jagran.com/"
+    ]
+  },
+  {
+    "title": "Dina Thanthi",
+    "image": "https://www.google.com/s2/favicons?domain=www.dailythanthi.com",
+    "provider": "webview",
+    "arguments": [
+      "https://www.dailythanthi.com/"
+    ]
+  },
+  {
+    "title": "Mathrubhumi",
+    "image": "https://www.google.com/s2/favicons?domain=www.mathrubhumi.com",
+    "provider": "webview",
+    "arguments": [
+      "https://www.mathrubhumi.com/"
+    ]
+  },
+  {
+    "title": "Daily Sakal",
+    "image": "https://www.google.com/s2/favicons?domain=www.esakal.com",
+    "provider": "webview",
+    "arguments": [
+      "https://www.esakal.com/"
+    ]
+  },
+  {
+    "title": "Sakshi",
+    "image": "https://www.google.com/s2/favicons?domain=www.sakshi.com",
+    "provider": "webview",
+    "arguments": [
+      "https://www.sakshi.com/"
+    ]
+  },
+  {
+    "title": "Ananda Bazar Patrika",
+    "image": "https://www.google.com/s2/favicons?domain=www.anandabazar.com",
+    "provider": "webview",
+    "arguments": [
+      "https://www.anandabazar.com/"
+    ]
+  },
+  {
+    "title": "The Hindu",
+    "image": "https://www.google.com/s2/favicons?domain=www.thehindu.com",
+    "provider": "webview",
+    "arguments": [
+      "https://www.thehindu.com/"
+    ]
+  },
+  {
+    "title": "Hindustan Times",
+    "image": "https://www.google.com/s2/favicons?domain=www.hindustantimes.com",
+    "provider": "webview",
+    "arguments": [
+      "https://www.hindustantimes.com/"
+    ]
+  },
+  {
+    "title": "Indian Express",
+    "image": "https://www.google.com/s2/favicons?domain=indianexpress.com",
+    "provider": "webview",
+    "arguments": [
+      "https://indianexpress.com/"
+    ]
+  },
+  {
+    "title": "Lokmat",
+    "image": "https://www.google.com/s2/favicons?domain=www.lokmat.com",
+    "provider": "webview",
+    "arguments": [
+      "https://www.lokmat.com/"
+    ]
+  },
+  {
+    "title": "Divya Bhaskar",
+    "image": "https://www.google.com/s2/favicons?domain=www.divyabhaskar.co.in",
+    "provider": "webview",
+    "arguments": [
+      "https://www.divyabhaskar.co.in/"
+    ]
+  },
+  {
+    "title": "Punjab Kesari",
+    "image": "https://www.google.com/s2/favicons?domain=www.punjabkesari.in",
+    "provider": "webview",
+    "arguments": [
+      "https://www.punjabkesari.in/"
+    ]
+  },
+  {
+    "title": "Prabhat Khabar",
+    "image": "https://www.google.com/s2/favicons?domain=www.prabhatkhabar.com",
+    "provider": "webview",
+    "arguments": [
+      "https://www.prabhatkhabar.com/"
+    ]
+  },
+  {
+    "title": "Bartaman",
+    "image": "https://www.google.com/s2/favicons?domain=bartamanpatrika.com",
+    "provider": "webview",
+    "arguments": [
+      "https://bartamanpatrika.com/"
+    ]
+  },
+  {
+    "title": "Dinakaran",
+    "image": "https://www.google.com/s2/favicons?domain=www.dinakaran.com",
+    "provider": "webview",
+    "arguments": [
+      "https://www.dinakaran.com/"
+    ]
+  },
+  {
+    "title": "Navbharat Times",
+    "image": "https://www.google.com/s2/favicons?domain=navbharattimes.indiatimes.com",
+    "provider": "webview",
+    "arguments": [
+      "https://navbharattimes.indiatimes.com/"
+    ]
+  },
+  {
+    "title": "Gujarat Samachar",
+    "image": "https://www.google.com/s2/favicons?domain=www.gujaratsamachar.com",
+    "provider": "webview",
+    "arguments": [
+      "https://www.gujaratsamachar.com/"
+    ]
+  },
+  {
+    "title": "Kannada Prabha",
+    "image": "https://www.google.com/s2/favicons?domain=www.kannadaprabha.com",
+    "provider": "webview",
+    "arguments": [
+      "https://www.kannadaprabha.com/"
+    ]
+  }
+]

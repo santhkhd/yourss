@@ -1,0 +1,10 @@
+[
+  {
+    "title": "Latest Videos",
+    "provider": "rss",
+    "arguments": [
+      "https://www.youtube.com/feeds/videos.xml?channel_id=UCno6OgN7-NDmRTNBgqWevlw"
+    ]
+  }
+]
+
