@@ -3,37 +3,37 @@
     {
       "title": "All Videos",
       "provider": "json",
-      "arguments": ["videos.json"],
+      "arguments": ["https://github.com/santhkhd/comalltamiltvliveshowsan/blob/main/cofigfiles/videos.json"],
       "image": "https://i4.ytimg.com/vi/MZg1Lj1iyVU/hqdefault.jpg"
     },
     {
       "title": "Channels",
       "provider": "overview",
-      "arguments": ["channels.json"],
+      "arguments": ["https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/cofigfiles/channels.json"],
       "image": "https://i4.ytimg.com/vi/MZg1Lj1iyVU/hqdefault.jpg"
     },
     {
       "title": "Live Channels",
       "provider": "overview",
-      "arguments": ["live.json"],
+      "arguments": ["https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/cofigfiles/live.json"],
       "image": "https://i4.ytimg.com/vi/MZg1Lj1iyVU/hqdefault.jpg"
     },
     {
       "title": "Live TV",
       "provider": "overview",
-      "arguments": ["livetv.json"],
+      "arguments": ["https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/cofigfiles/livetv.json"],
       "image": ""
     },
     {
       "title": "Tamil News",
       "provider": "overview",
-      "arguments": ["tamilnews.json"],
+      "arguments": ["https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/cofigfiles/tamilnews.json"],
       "image": ""
     },
     {
       "title": "YouTube RSS",
       "provider": "overview",
-      "arguments": ["youtube_rss.json"],
+      "arguments": ["https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/cofigfiles/youtube_rss.json"],
       "image": ""
     }
   ]
