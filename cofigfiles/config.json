@@ -37,7 +37,7 @@
         "title": "Home Hub",
         "provider": "overview",
         "arguments": [
-          "overview.json"
+          "https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/cofigfiles/overview.json"
         ]
       }
     ]
