@@ -41,9 +41,9 @@
     },
     {
       "title": "Latest Videos",
-      "provider": "json",
+      "provider": "overview",
       "arguments": [
-        "https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/cofigfiles/videos.json"
+        "https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/cofigfiles/comedy.json"
       ],
       "image": "https://img.icons8.com/color/96/video.png"
     }
