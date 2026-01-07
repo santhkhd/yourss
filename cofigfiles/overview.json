@@ -20,7 +20,7 @@
       "title": "Newspapers",
       "provider": "overview",
       "arguments": [
-        "https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/cofigfiles/tamilnews.json"
+        "https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/cofigfiles/movies_data.json"
       ],
       "image": "https://img.icons8.com/color/96/news.png"
     },
