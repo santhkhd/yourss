@@ -43,33 +43,39 @@
     },
     "menus": [
         {
+            "name": "home",
+            "type": "category",
+            "url": "home.json",
+            "icon": "https://img.icons8.com/color/96/tv.png"
+        },
+        {
             "name": "Live TV & Shows",
             "type": "category",
-            "url": "https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/config/webdroitamitvshow/tv_channels.json",
+            "url": "tv_channels.json",
             "icon": "https://img.icons8.com/color/96/tv.png"
         },
         {
             "name": "Newspapers",
             "type": "category",
-            "url": "https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/config/webdroitamitvshow/tamilnews.json",
+            "url": "tamilnews.json",
             "icon": "https://img.icons8.com/color/96/news.png"
         },
         {
             "name": "Comedy",
             "type": "category",
-            "url": "https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/config/webdroitamitvshow/comedy.json",
+            "url": "comedy.json",
             "icon": "https://img.icons8.com/color/96/video.png"
         },
         {
             "name": "Top Stories",
             "type": "rss",
-            "url": "https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/config/webdroitamitvshow/https://www.thehindu.com/news/national/?service=rss",
+            "url": "https://www.thehindu.com/news/national/?service=rss",
             "icon": "https://img.icons8.com/color/96/hot-article.png"
         },
         {
             "name": "YouTube Channels",
             "type": "category",
-            "url": "https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/config/webdroitamitvshow/youtube_categories.json",
+            "url": "youtube_categories.json",
             "icon": "https://img.icons8.com/color/96/youtube-play.png"
         },
         {
@@ -123,4 +129,3 @@
         }
     }
 }
-
