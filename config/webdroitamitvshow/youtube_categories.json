@@ -4,7 +4,7 @@
         "image": "https://img.icons8.com/color/96/comedy.png",
         "provider": "overview",
         "arguments": [
-            "https://github.com/santhkhd/comalltamiltvliveshowsan/tree/main/config/webdroitamitvshow/comedy_channels.json"
+            "https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/config/webdroitamitvshow/comedy_channels.json"
         ]
     },
     {
@@ -12,7 +12,7 @@
         "image": "https://img.icons8.com/color/96/music.png",
         "provider": "overview",
         "arguments": [
-            "https://github.com/santhkhd/comalltamiltvliveshowsan/tree/main/config/webdroitamitvshow/music_channels.json"
+            "https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/config/webdroitamitvshow/music_channels.json"
         ]
     },
     {
@@ -20,7 +20,7 @@
         "image": "https://img.icons8.com/color/96/news.png",
         "provider": "overview",
         "arguments": [
-            "https://github.com/santhkhd/comalltamiltvliveshowsan/tree/main/config/webdroitamitvshow/news_channels.json"
+            "https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/config/webdroitamitvshow/news_channels.json"
         ]
     },
     {
@@ -28,7 +28,7 @@
         "image": "https://img.icons8.com/color/96/tv.png",
         "provider": "overview",
         "arguments": [
-            "https://github.com/santhkhd/comalltamiltvliveshowsan/tree/main/config/webdroitamitvshow/tv_channels.json"
+            "https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/config/webdroitamitvshow/tv_channels.json"
         ]
     },
     {
@@ -36,8 +36,9 @@
         "image": "https://img.icons8.com/color/96/troll.png",
         "provider": "overview",
         "arguments": [
-            "https://github.com/santhkhd/comalltamiltvliveshowsan/tree/main/config/webdroitamitvshow/troll_channels.json"
+            "https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/config/webdroitamitvshow/troll_channels.json"
         ]
     }
 
 ]
+
