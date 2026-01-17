@@ -41,54 +41,42 @@
             }
         ]
     },
-    "overview": [
+    "menus": [
         {
-            "title": "YouTube Channels",
-            "provider": "overview",
-            "arguments": [
-                "youtube_categories.json"
-            ],
-            "image": "https://img.icons8.com/color/96/youtube-play.png"
+            "name": "Live TV & Shows",
+            "type": "category",
+            "url": "tv_channels.json",
+            "icon": "https://img.icons8.com/color/96/tv.png"
         },
         {
-            "title": "Live TV & Shows",
-            "provider": "overview",
-            "arguments": [
-                "tv_channels.json"
-            ],
-            "image": "https://img.icons8.com/color/96/tv.png"
+            "name": "Newspapers",
+            "type": "category",
+            "url": "tamilnews.json",
+            "icon": "https://img.icons8.com/color/96/news.png"
         },
         {
-            "title": "Newspapers",
-            "provider": "overview",
-            "arguments": [
-                "tamilnews.json"
-            ],
-            "image": "https://img.icons8.com/color/96/news.png"
+            "name": "Comedy",
+            "type": "category",
+            "url": "comedy.json",
+            "icon": "https://img.icons8.com/color/96/video.png"
         },
         {
-            "title": "Top Stories",
-            "provider": "rss",
-            "arguments": [
-                "https://www.thehindu.com/news/national/?service=rss"
-            ],
-            "image": "https://img.icons8.com/color/96/hot-article.png"
+            "name": "Top Stories",
+            "type": "rss",
+            "url": "https://www.thehindu.com/news/national/?service=rss",
+            "icon": "https://img.icons8.com/color/96/hot-article.png"
         },
         {
-            "title": "HD movies",
-            "provider": "movies",
-            "arguments": [
-                "https://raw.githubusercontent.com/santhkhd/tamilmovie/refs/heads/main/imdb_tamil_movies_with_cast.json"
-            ],
-            "image": "https://img.icons8.com/color/96/hot-article.png"
+            "name": "YouTube Channels",
+            "type": "category",
+            "url": "youtube_categories.json",
+            "icon": "https://img.icons8.com/color/96/youtube-play.png"
         },
         {
-            "title": "Comedy",
-            "provider": "overview",
-            "arguments": [
-                "comedy.json"
-            ],
-            "image": "https://img.icons8.com/color/96/video.png"
+            "name": "Privacy Policy",
+            "type": "assets",
+            "url": "privacy_policy.html",
+            "icon": "https://raw.githubusercontent.com/solodroidev/content/uploads/images/webview/icons/privacy-policy.png"
         }
     ],
     "ads": {
