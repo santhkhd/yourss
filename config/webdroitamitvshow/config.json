@@ -12,6 +12,12 @@
         "more_apps_url": "https://codecanyon.net/user/solodroid/portfolio",
         "redirect_url": ""
     },
+    "rss_news": [
+        {
+            "title": "Top Stories",
+            "url": "https://www.thehindu.com/news/national/?service=rss"
+        }
+    ],
     "intro": {
         "status": true,
         "sliders": [
