@@ -2,7 +2,7 @@
     {
         "title": "Comedy Hub",
         "image": "https://img.icons8.com/color/96/comedy.png",
-        "provider": "overview",
+        "provider": "categories",
         "arguments": [
             "https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/config/webdroitamitvshow/comedy_channels.json"
         ]
@@ -10,7 +10,7 @@
     {
         "title": "Music Hub",
         "image": "https://img.icons8.com/color/96/music.png",
-        "provider": "overview",
+        "provider": "categories",
         "arguments": [
             "https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/config/webdroitamitvshow/music_channels.json"
         ]
@@ -18,7 +18,7 @@
     {
         "title": "News Hub",
         "image": "https://img.icons8.com/color/96/news.png",
-        "provider": "overview",
+        "provider": "categories",
         "arguments": [
             "https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/config/webdroitamitvshow/news_channels.json"
         ]
@@ -26,7 +26,7 @@
     {
         "title": "TV Hub",
         "image": "https://img.icons8.com/color/96/tv.png",
-        "provider": "overview",
+        "provider": "categories",
         "arguments": [
             "https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/config/webdroitamitvshow/tv_channels.json"
         ]
@@ -34,11 +34,12 @@
     {
         "title": "Troll Hub",
         "image": "https://img.icons8.com/color/96/troll.png",
-        "provider": "overview",
+        "provider": "categories",
         "arguments": [
             "https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/config/webdroitamitvshow/troll_channels.json"
         ]
     }
 
 ]
+
 
