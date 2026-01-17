@@ -45,25 +45,25 @@
         {
             "name": "home",
             "type": "category",
-            "url": "https://github.com/santhkhd/comalltamiltvliveshowsan/tree/main/config/webdroitamitvshow/home.json",
+            "url": "https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/config/webdroitamitvshow/home.json",
             "icon": "https://img.icons8.com/color/96/tv.png"
         },
         {
             "name": "Live TV & Shows",
             "type": "category",
-            "url": "https://github.com/santhkhd/comalltamiltvliveshowsan/tree/main/config/webdroitamitvshow/tv_channels.json",
+            "url": "https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/config/webdroitamitvshow/tv_channels.json",
             "icon": "https://img.icons8.com/color/96/tv.png"
         },
         {
             "name": "Newspapers",
             "type": "category",
-            "url": "https://github.com/santhkhd/comalltamiltvliveshowsan/tree/main/config/webdroitamitvshow/tamilnews.json",
+            "url": "https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/config/webdroitamitvshow/tamilnews.json",
             "icon": "https://img.icons8.com/color/96/news.png"
         },
         {
             "name": "Comedy",
             "type": "category",
-            "url": "https://github.com/santhkhd/comalltamiltvliveshowsan/tree/main/config/webdroitamitvshow/comedy.json",
+            "url": "https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/config/webdroitamitvshow/comedy.json",
             "icon": "https://img.icons8.com/color/96/video.png"
         },
         {
@@ -75,7 +75,7 @@
         {
             "name": "YouTube Channels",
             "type": "category",
-            "url": "https://github.com/santhkhd/comalltamiltvliveshowsan/tree/main/config/webdroitamitvshow/youtube_categories.json",
+            "url": "https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/config/webdroitamitvshow/youtube_categories.json",
             "icon": "https://img.icons8.com/color/96/youtube-play.png"
         },
         {
@@ -129,4 +129,5 @@
         }
     }
 }
+
 
