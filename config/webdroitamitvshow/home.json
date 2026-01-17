@@ -2,27 +2,35 @@
     "overview": [
         {
             "title": "YouTube Channels",
-            "provider": "categories",
+            "provider": "overview",
             "arguments": [
-                "https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/config/webdroitamitvshow/youtube_categories.json"
+                "youtube_categories.json"
             ],
             "image": "https://img.icons8.com/color/96/youtube-play.png"
         },
         {
             "title": "Live TV & Shows",
-            "provider": "categories",
+            "provider": "overview",
             "arguments": [
-                "https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/config/webdroitamitvshow/live.json"
+                "tv_channels.json"
             ],
             "image": "https://img.icons8.com/color/96/tv.png"
         },
         {
             "title": "Newspapers",
-            "provider": "categories",
+            "provider": "overview",
             "arguments": [
-                "https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/config/webdroitamitvshow/tamilnews.json"
+                "tamilnews.json"
             ],
             "image": "https://img.icons8.com/color/96/news.png"
+        },
+        {
+            "title": "Comedy",
+            "provider": "overview",
+            "arguments": [
+                "comedy.json"
+            ],
+            "image": "https://img.icons8.com/color/96/video.png"
         },
         {
             "title": "Top Stories",
@@ -36,17 +44,9 @@
             "title": "HD movies",
             "provider": "movies",
             "arguments": [
-                "https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/config/webdroitamitvshow/movies_data.json"
+                "https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/cofigfiles/movies_data.json"
             ],
             "image": "https://img.icons8.com/color/96/hot-article.png"
-        },
-        {
-            "title": "Latest Videos",
-            "provider": "json",
-            "arguments": [
-                "https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/config/webdroitamitvshow/videos.json"
-            ],
-            "image": "https://img.icons8.com/color/96/video.png"
         }
     ]
 }
