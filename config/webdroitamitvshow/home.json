@@ -4,7 +4,7 @@
             "title": "YouTube Channels",
             "provider": "categories",
             "arguments": [
-                "https://github.com/santhkhd/comalltamiltvliveshowsan/tree/main/config/webdroitamitvshow/youtube_categories.json"
+                "https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/config/webdroitamitvshow/youtube_categories.json"
             ],
             "image": "https://img.icons8.com/color/96/youtube-play.png"
         },
@@ -12,7 +12,7 @@
             "title": "Live TV & Shows",
             "provider": "categories",
             "arguments": [
-                "https://github.com/santhkhd/comalltamiltvliveshowsan/tree/main/config/webdroitamitvshow/live.json"
+                "https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/config/webdroitamitvshow/live.json"
             ],
             "image": "https://img.icons8.com/color/96/tv.png"
         },
@@ -20,7 +20,7 @@
             "title": "Newspapers",
             "provider": "categories",
             "arguments": [
-                "https://github.com/santhkhd/comalltamiltvliveshowsan/tree/main/config/webdroitamitvshow/tamilnews.json"
+                "https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/config/webdroitamitvshow/tamilnews.json"
             ],
             "image": "https://img.icons8.com/color/96/news.png"
         },
@@ -36,7 +36,7 @@
             "title": "HD movies",
             "provider": "movies",
             "arguments": [
-                "https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/cofigfiles/movies_data.json"
+                "https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/config/webdroitamitvshow/movies_data.json"
             ],
             "image": "https://img.icons8.com/color/96/hot-article.png"
         },
@@ -44,7 +44,7 @@
             "title": "Latest Videos",
             "provider": "json",
             "arguments": [
-                "https://github.com/santhkhd/comalltamiltvliveshowsan/tree/main/config/webdroitamitvshow/videos.json"
+                "https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/config/webdroitamitvshow/videos.json"
             ],
             "image": "https://img.icons8.com/color/96/video.png"
         }
