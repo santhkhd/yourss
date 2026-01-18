@@ -4,7 +4,7 @@
             "title": "YouTube Channels",
             "provider": "overview",
             "arguments": [
-                "https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/config/webdroitamitvshow/youtube_categories.json"
+                "youtube_categories.json"
             ],
             "image": "https://img.icons8.com/color/96/youtube-play.png"
         },
@@ -12,7 +12,7 @@
             "title": "Live TV & Shows",
             "provider": "overview",
             "arguments": [
-                "https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/config/webdroitamitvshow/tv_channels.json"
+                "tv_channels.json"
             ],
             "image": "https://img.icons8.com/color/96/tv.png"
         },
@@ -20,7 +20,7 @@
             "title": "Newspapers",
             "provider": "overview",
             "arguments": [
-                "https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/config/webdroitamitvshow/tamilnews.json"
+                "tamilnews.json"
             ],
             "image": "https://img.icons8.com/color/96/news.png"
         },
@@ -28,7 +28,7 @@
             "title": "Comedy",
             "provider": "overview",
             "arguments": [
-                "https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/config/webdroitamitvshow/comedy.json"
+                "comedy.json"
             ],
             "image": "https://img.icons8.com/color/96/video.png"
         },
@@ -47,6 +47,20 @@
                 "https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/cofigfiles/movies_data.json"
             ],
             "image": "https://img.icons8.com/color/96/hot-article.png"
+        },
+        {
+            "title": "Latest Videos",
+            "provider": "latest_videos",
+            "arguments": [
+                "ALL_VIDEOS"
+            ],
+            "image": "https://cdn-icons-png.flaticon.com/512/2991/2991195.png"
+        },
+        {
+            "title": "Favorites",
+            "provider": "favorites",
+            "arguments": [],
+            "image": "https://cdn-icons-png.flaticon.com/512/2589/2589175.png"
         }
     ]
 }
