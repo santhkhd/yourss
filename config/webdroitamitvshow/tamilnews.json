@@ -4,7 +4,7 @@
         "image": "",
         "provider": "webview",
         "arguments": [
-            "https://www.dailythanthi.com/"
+            "https://www.dailythanthi.com?target=external"
         ]
     },
     {
@@ -391,4 +391,5 @@
             "https://yarl.com/"
         ]
     }
+
 ]
