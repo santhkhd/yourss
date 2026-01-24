@@ -32,11 +32,14 @@
             ],
             "image": "https://img.icons8.com/color/96/video.png"
         },
-        {
+       {
             "title": "Top Stories",
             "provider": "rss",
             "arguments": [
-                "https://www.thehindu.com/news/national/?service=rss"
+                "https://www.thehindu.com/news/national/?service=rss",
+                "https://www.dailythanthi.com/google_feeds.xml",
+                "https://www.dinamani.com/feed",
+                "https://www.maalaimalar.com/google_feeds.xml"
             ],
             "image": "https://img.icons8.com/color/96/hot-article.png"
         },
