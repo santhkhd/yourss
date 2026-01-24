@@ -48,14 +48,7 @@
             ],
             "image": "https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/config/webdroitamitvshow/movie.png"
         },
-        {
-            "title": "Latest Videos",
-            "provider": "latest_videos",
-            "arguments": [
-                "ALL_VIDEOS"
-            ],
-            "image": "https://img.icons8.com/color/96/play.png"
-        },
+      
         {
             "title": "Favorites",
             "provider": "favorites",
