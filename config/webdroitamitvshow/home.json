@@ -16,7 +16,14 @@
             ],
             "image": "https://img.icons8.com/color/96/tv.png"
         },
-       
+        {
+            "title": "Newspapers",
+            "provider": "overview",
+            "arguments": [
+                "tamilnews.json"
+            ],
+            "image": "https://img.icons8.com/color/96/news.png"
+        },
         {
             "title": "Comedy",
             "provider": "overview",
@@ -47,13 +54,13 @@
             "arguments": [
                 "ALL_VIDEOS"
             ],
-            "image": "https://cdn-icons-png.flaticon.com/512/2991/2991195.png"
+            "image": "https://img.icons8.com/color/96/play.png"
         },
         {
             "title": "Favorites",
             "provider": "favorites",
             "arguments": [],
-            "image": "https://cdn-icons-png.flaticon.com/512/2589/2589175.png"
+            "image": "https://img.icons8.com/color/96/hearts.png"
         }
     ]
 }
