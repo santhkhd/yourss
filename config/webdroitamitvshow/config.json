@@ -245,7 +245,6 @@
             "title": "Top Stories",
             "provider": "rss",
             "arguments": [
-                "https://www.thehindu.com/news/national/?service=rss",
                 "https://www.dailythanthi.com/google_feeds.xml",
                 "https://www.dinamani.com/feed",
                 "https://www.maalaimalar.com/google_feeds.xml"
@@ -313,6 +312,7 @@
         }
     }
 }
+
 
 
 
