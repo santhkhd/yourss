@@ -241,11 +241,16 @@
             "url": "https://raw.githubusercontent.com/santhkhd/comalltamiltvliveshowsan/refs/heads/main/config/webdroitamitvshow/comedy.json",
             "icon": "https://img.icons8.com/color/96/video.png"
         },
-        {
-            "name": "Top Stories",
-            "type": "rss",
-            "url": "https://www.thehindu.com/news/national/?service=rss",
-            "icon": "https://img.icons8.com/color/96/hot-article.png"
+       {
+            "title": "Top Stories",
+            "provider": "rss",
+            "arguments": [
+                "https://www.thehindu.com/news/national/?service=rss",
+                "https://www.dailythanthi.com/google_feeds.xml",
+                "https://www.dinamani.com/feed",
+                "https://www.maalaimalar.com/google_feeds.xml"
+            ],
+            "image": "https://img.icons8.com/color/96/hot-article.png"
         },
         {
             "name": "YouTube Channels",
@@ -308,5 +313,6 @@
         }
     }
 }
+
 
 
